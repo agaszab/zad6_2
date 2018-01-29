@@ -11,10 +11,10 @@ public class Program {
         for (int i = 0; i < tab.length * 2; i++) {
             if (i < tab.length) {
                 tab[i] = rand.nextInt(10);
-                System.out.print(tab[i] + ", ");
+                System.out.print(tab[i] + " ");
             }
             if (i > tab.length) {
-                System.out.print(tab[(tab.length -1)- j] + ", ");
+                System.out.print(tab[(tab.length -1)- j] + " ");
                 j++;
 
             }
