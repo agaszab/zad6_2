@@ -1,29 +1,25 @@
+
 import java.util.Random;
 
 public class Program {
-
     public static void main(String[] args) {
-        int n = 4;
-        int m = 5;
-        int[][] tab = new int[n][m];
 
-        MultiArray multi = new MultiArray(tab);
+        int[] tab = new int[10];
+        int j = 0;
         Random rand = new Random();
 
-        multi.MultiArray(n, m);
-        multi.print(tab);
+        for (int i = 0; i < tab.length * 2; i++) {
+            if (i < tab.length) {
+                tab[i] = rand.nextInt(10);
+                System.out.print(tab[i] + ", ");
+            }
+            if (i > tab.length) {
+                System.out.print(tab[(tab.length -1)- j] + ", ");
+                j++;
 
-        System.out.println("Najmniejsza wartość w tablicy to: "+ multi.findMin());
-        System.out.println("Największa wartość w tablicy to: "+ multi.findMax());
-        System.out.println();
+            }
 
-        multi.randomize();
-        multi.print(tab);
 
-        System.out.println();
-        System.out.println("Najmniejsza wartość w tablicy to: "+ multi.findMin());
-        System.out.println("Największa wartość w tablicy to: "+ multi.findMax());
+        }
     }
 }
-
-
