@@ -59,7 +59,7 @@ public class MultiArray {
             for (int j = 0; j < tab[i].length; j++) {
                 //   tab[i][j] = rand.nextInt(10);
 
-                System.out.print(tab[i][j]);
+                System.out.print(tab[i][j]+" ");
 
             }
             System.out.println(" ");
