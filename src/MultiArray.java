@@ -5,15 +5,9 @@ public class MultiArray {
     private int[][] tab;
 
 
-    public MultiArray(int[][] tab) {   // konstruktor
-        this.tab = tab;
-    }
+    public MultiArray(int n, int m) {                                    // konstruktor z przypisaniem losowych wartości
 
-    public MultiArray() {   // konstruktor pusty
-    }
-
-
-    void MultiArray(int n, int m) {                                    // przypisanie losowych wartości
+        this.tab = new int[n][m];
 
         Random rand = new Random();
         for (int i = 0; i < tab.length; i++) {
@@ -47,7 +41,7 @@ public class MultiArray {
     }
 
     int findMax() { // zwraca największą wartość w tablicy
-        int max=tab[0][0];
+        int max = tab[0][0];
 
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab[i].length; j++) {
@@ -59,8 +53,7 @@ public class MultiArray {
         return max;
     }
 
-
-    void print(int[][] tab) {                                       // wyświetla tablicę w konsoli w czytelnej formie
+    void print() {            // wyświetla tablicę w konsoli w czytelnej formie
 
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab[i].length; j++) {
