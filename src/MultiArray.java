@@ -5,21 +5,18 @@ public class MultiArray {
     private int[][] tab;
 
 
-    public MultiArray(int n, int m) {                                    // konstruktor z przypisaniem losowych wartości
+
+
+    public MultiArray(int n, int m) {            // konstruktor z przypisaniem losowych wartości
 
         this.tab = new int[n][m];
 
-        Random rand = new Random();
-        for (int i = 0; i < tab.length; i++) {
-            for (int j = 0; j < tab[i].length; j++) {
-                tab[i][j] = rand.nextInt(10);
-            }
-        }
+        randomize();
 
     }
 
 
-    void randomize() {                 // uzupełnia tablicę nowymi, losowymi liczbami
+    public void randomize() {                 // uzupełnia tablicę nowymi, losowymi liczbami
 
         Random rand = new Random();
         for (int i = 0; i < tab.length; i++) {
@@ -28,6 +25,7 @@ public class MultiArray {
             }
         }
     }
+
 
     int findMin() {                     // zwraca najmniejszą wartość w tablicy
         int min = tab[0][0];
